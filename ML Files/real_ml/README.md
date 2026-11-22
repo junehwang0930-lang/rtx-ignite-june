@@ -1,6 +1,6 @@
-# Real radar data pipeline — Phase 1
+# Real radar data pipeline
 
-Independent, offline validation and feature engineering for real NRC radar measurements. **No model is trained. Object class is not intent:** this dataset cannot establish whether a UAV is malicious, authorized or threatening.
+Independent, offline validation and feature engineering for real NRC radar measurements. Phase 2 compares offline BIRD/UAV baselines. Object class is not intent:** this dataset cannot establish whether a UAV is malicious, authorized or threatening.
 
 ## Reproduce
 
@@ -16,7 +16,7 @@ python -m venv .venv
 .venv/Scripts/python -m unittest discover -s tests -v
 ```
 
-For the exact tested dependency set on Python 3.12, install `requirements-lock.txt` instead of `requirements.txt`. The latter pins the five direct dependencies; the lock also pins their transitive dependencies. The four real-data integration tests skip when processed outputs are absent; run all commands above to exercise them.
+For the exact tested dependency set on Python 3.12, install `requirements-lock.txt` instead of `requirements.txt`. The latter pins the direct dependencies; the lock also pins their transitive dependencies. The four real-data integration tests skip when processed outputs are absent; run all commands above to exercise them.
 
 ## Validated snapshot results
 
@@ -66,8 +66,19 @@ Exact repeated CSV records (including timestamps) are removed. Excel has no time
 
 `reports/` contains the generated [quality report](reports/data_quality_report.md), preprocessing counts, input/exclusion/duplicate/full-log audits, column dictionary, class counts and session coverage, descriptive statistics/correlations, and readable PNG plots. The full-log audit contains identifiers and counts only, not raw radar observations. Unit tests use small validation inputs to exercise error handling; these are never written into the analysis dataset.
 
-## Future model comparison and limitations
+## Reproduce the offline comparison
 
-Compare Logistic Regression, a shallow Decision Tree and a constrained Random Forest only after reviewing the reports and freezing a grouped holdout. Split by `recording_session`, keeping both radars and every representation of a recording together; prefer day/trial holdouts to reduce shared-scene and repeated-flight leakage further. Inspect class coverage per group first; rare classes may not support independent four-class evaluation. Fit imputation, scaling, feature selection and class weights within training folds only. Use identical folds, fixed seeds, macro-F1, balanced accuracy, per-class precision/recall and confusion matrices. Explain coefficients, tree rules and held-out permutation importance. Keep provenance columns out of input matrices.
+Use Python 3.12 and the pinned requirements-lock.txt. From this directory activate the virtual environment with `source .venv/bin/activate` on macOS/Linux or `.venv\Scripts\Activate.ps1` in Windows PowerShell. With the environment active, run:
 
-Evaluate ablations of absolute position/range, missingness and observation counts: these may encode scene, curation, acquisition duration or format. Full-track summaries are offline analysis and must not be advertised as a real-time early-warning model. Correlation and class differences are descriptive, not causal evidence. Class imbalance, selected UAV extracts, a single radar family, few field days, uncertain cross-session object identity and Quebec collection conditions limit transfer to civilian stadium events. Dataset labels cannot validate malicious-intent recognition or existing simulated threat scores.
+```sh
+python -m pip install -r requirements-lock.txt
+python download_data.py
+python preprocess.py
+python explore.py
+python train.py
+python -m unittest discover -s tests -v
+```
+
+Training and evaluation run together on the Phase 1 tracks. The command writes metrics and figures to reports/phase2. The presentation summary gives the protocol, measured results, explanation and limitations. The implementation uses scikit-learn for consistent fold-local preprocessing and conventional baseline estimators.
+
+[Research results and presentation summary](reports/presentation_summary.md)

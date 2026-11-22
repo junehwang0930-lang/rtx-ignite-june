@@ -2,7 +2,7 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import time
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -17,6 +17,8 @@ def git_blob_sha(data):
 
 
 def safe_path(root, name):
+    if PureWindowsPath(name).anchor:
+        raise ValueError(f"Unsafe upstream path: {name}")
     target = (root / name).resolve()
     if not target.is_relative_to(root.resolve()):
         raise ValueError(f"Unsafe upstream path: {name}")

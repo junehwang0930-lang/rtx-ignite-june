@@ -19,7 +19,7 @@ Team 20 entry for the **2026 RTX Ignite Design Challenge**: a portable counter-U
 
 | Folder | Contents |
 |---|---|
-| [`ML Files/`](ML%20Files) | **Current:** [`real_ml/`](ML%20Files/real_ml) — real NRC radar data pipeline (713 validated labeled tracks, features, quality reports) for object classification. No model trained yet. **Earlier prototype:** simulator, simulated data and model kept for reference. Radar site survey code is in `site_survey/`. |
+| [`ML Files/`](ML%20Files) | **Current:** [`real_ml/`](ML%20Files/real_ml) — real NRC radar data pipeline (713 validated labeled tracks, features, quality reports) for object classification. Offline BIRD/UAV baselines evaluated on held-out recording days. **Earlier prototype:** simulator, simulated data and model kept for reference. Radar site survey code is in `site_survey/`. |
 | [`CAD Files/`](CAD%20Files) | FreeCAD models (`.FCStd`) of both kits, the deployment cases, the command post kit, and Kyle Field with the kits installed, plus rendered images in `Renders/`. |
 | [`Coverage Maps/`](Coverage%20Maps) | Interactive coverage viewer (download `Kyle_Field_v9_Coverage_Viewer.html` and open it in a browser), RF / camera envelope map (PNG and SVG), and the radar line-of-sight site survey image. See `README_Revised.txt` for the viewer's assumptions; the survey code is in `ML Files/site_survey/`. |
 | [`3D Simulation Files/`](3D%20Simulation%20Files) | Interactive demo of the earlier simulated prototype (layout, operator view, sensor toggles). Download `cuas_demo.html` and open it in Chrome. Its on-screen calls come from the older simulated model, not the current classifier. |
@@ -27,10 +27,8 @@ Team 20 entry for the **2026 RTX Ignite Design Challenge**: a portable counter-U
 
 ## Running the ML pipeline
 
-For the independent **real-world radar data pipeline (Phase 1)**, see
-[`ML Files/real_ml/README.md`](ML%20Files/real_ml/README.md). It validates NRC
-measurements and prepares object-classification features without training a model
-or inferring intent. The simulation commands below are preserved for reference.
+For the independent **real-world radar data pipeline**, see
+[`ML Files/real_ml/README.md`](ML%20Files/real_ml/README.md). It validates NRC measurements and compares offline BIRD/UAV classifiers. The selected tree reached 82.7% balanced accuracy on 82 later-day tracks. [Results and limitations](ML%20Files/real_ml/reports/presentation_summary.md) The simulation commands below are preserved for reference.
 
 ```bash
 cd "ML Files"
@@ -43,7 +41,7 @@ See `ML Files/README.md` for the full pipeline (case generation, simulation, tra
 
 ## Important caveats
 
-- **No ML model has been trained on real data yet.** The real-data pipeline validates and prepares NRC radar tracks only. Older numbers in the simulated prototype are not real-world results.
+- **Real-data evaluation covers completed bird and UAV tracks only.** Older numbers in the simulated prototype are not real-world results.
 - The NRC data comes from one radar family in Quebec and is mostly birds (146 UAV tracks), so it may not transfer directly to a Texas stadium.
 - The effector kit is a concept: no specific authorized product selected, not in CAD, not tested.
 - Coverage figures are geometric line of sight using estimated building heights, with no terrain or trees.

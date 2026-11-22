@@ -1,0 +1,1096 @@
+{
+  "features": [
+    "veloX_mean",
+    "veloX_std",
+    "veloY_mean",
+    "veloY_std",
+    "veloZ_mean",
+    "veloZ_std",
+    "rcs_mean",
+    "rcs_std"
+  ],
+  "cutoff": 20201218,
+  "seed": 20,
+  "labels": [
+    "BIRD",
+    "UAV"
+  ],
+  "selected": "Shallow tree",
+  "development": {
+    "Majority": {
+      "classes": {
+        "BIRD": {
+          "precision": 0.8615107913669064,
+          "recall": 1.0,
+          "f1-score": 0.9256038647342996,
+          "support": 479.0
+        },
+        "UAV": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 77.0
+        }
+      },
+      "accuracy": 0.8615107913669064,
+      "balanced_accuracy": 0.5,
+      "macro_f1": 0.4628019323671498,
+      "confusion": [
+        [
+          479,
+          0
+        ],
+        [
+          77,
+          0
+        ]
+      ]
+    },
+    "Logistic": {
+      "classes": {
+        "BIRD": {
+          "precision": 0.9544468546637744,
+          "recall": 0.918580375782881,
+          "f1-score": 0.9361702127659575,
+          "support": 479.0
+        },
+        "UAV": {
+          "precision": 0.5894736842105263,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.6511627906976745,
+          "support": 77.0
+        }
+      },
+      "accuracy": 0.8920863309352518,
+      "balanced_accuracy": 0.8229265515278041,
+      "macro_f1": 0.793666501731816,
+      "confusion": [
+        [
+          440,
+          39
+        ],
+        [
+          21,
+          56
+        ]
+      ]
+    },
+    "Shallow tree": {
+      "classes": {
+        "BIRD": {
+          "precision": 0.9664429530201343,
+          "recall": 0.9018789144050104,
+          "f1-score": 0.9330453563714903,
+          "support": 479.0
+        },
+        "UAV": {
+          "precision": 0.5688073394495413,
+          "recall": 0.8051948051948052,
+          "f1-score": 0.6666666666666666,
+          "support": 77.0
+        }
+      },
+      "accuracy": 0.8884892086330936,
+      "balanced_accuracy": 0.8535368597999078,
+      "macro_f1": 0.7998560115190785,
+      "confusion": [
+        [
+          432,
+          47
+        ],
+        [
+          15,
+          62
+        ]
+      ]
+    }
+  },
+  "development_days": {
+    "Majority": {
+      "20191011": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.8591549295774648,
+            "recall": 1.0,
+            "f1-score": 0.9242424242424242,
+            "support": 183.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 30.0
+          }
+        },
+        "accuracy": 0.8591549295774648,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.4621212121212121,
+        "confusion": [
+          [
+            183,
+            0
+          ],
+          [
+            30,
+            0
+          ]
+        ]
+      },
+      "20191012": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.7446808510638298,
+            "recall": 1.0,
+            "f1-score": 0.8536585365853658,
+            "support": 35.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 12.0
+          }
+        },
+        "accuracy": 0.7446808510638298,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.4268292682926829,
+        "confusion": [
+          [
+            35,
+            0
+          ],
+          [
+            12,
+            0
+          ]
+        ]
+      },
+      "20191013": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.9194139194139194,
+            "recall": 1.0,
+            "f1-score": 0.9580152671755725,
+            "support": 251.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 22.0
+          }
+        },
+        "accuracy": 0.9194139194139194,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.47900763358778625,
+        "confusion": [
+          [
+            251,
+            0
+          ],
+          [
+            22,
+            0
+          ]
+        ]
+      },
+      "20201109": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 2.0
+          }
+        },
+        "accuracy": 0.0,
+        "balanced_accuracy": null,
+        "macro_f1": 0.0,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "20201119": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.47619047619047616,
+            "recall": 1.0,
+            "f1-score": 0.6451612903225806,
+            "support": 10.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 11.0
+          }
+        },
+        "accuracy": 0.47619047619047616,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.3225806451612903,
+        "confusion": [
+          [
+            10,
+            0
+          ],
+          [
+            11,
+            0
+          ]
+        ]
+      }
+    },
+    "Logistic": {
+      "20191011": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.9421052631578948,
+            "recall": 0.9781420765027322,
+            "f1-score": 0.9597855227882037,
+            "support": 183.0
+          },
+          "UAV": {
+            "precision": 0.8260869565217391,
+            "recall": 0.6333333333333333,
+            "f1-score": 0.7169811320754716,
+            "support": 30.0
+          }
+        },
+        "accuracy": 0.9295774647887324,
+        "balanced_accuracy": 0.8057377049180328,
+        "macro_f1": 0.8383833274318377,
+        "confusion": [
+          [
+            179,
+            4
+          ],
+          [
+            11,
+            19
+          ]
+        ]
+      },
+      "20191012": {
+        "classes": {
+          "BIRD": {
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1-score": 0.7272727272727273,
+            "support": 35.0
+          },
+          "UAV": {
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1-score": 0.6153846153846154,
+            "support": 12.0
+          }
+        },
+        "accuracy": 0.6808510638297872,
+        "balanced_accuracy": 0.7857142857142857,
+        "macro_f1": 0.6713286713286714,
+        "confusion": [
+          [
+            20,
+            15
+          ],
+          [
+            0,
+            12
+          ]
+        ]
+      },
+      "20191013": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.9831223628691983,
+            "recall": 0.9282868525896414,
+            "f1-score": 0.9549180327868853,
+            "support": 251.0
+          },
+          "UAV": {
+            "precision": 0.5,
+            "recall": 0.8181818181818182,
+            "f1-score": 0.6206896551724138,
+            "support": 22.0
+          }
+        },
+        "accuracy": 0.9194139194139194,
+        "balanced_accuracy": 0.8732343353857298,
+        "macro_f1": 0.7878038439796495,
+        "confusion": [
+          [
+            233,
+            18
+          ],
+          [
+            4,
+            18
+          ]
+        ]
+      },
+      "20201109": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2.0
+          }
+        },
+        "accuracy": 1.0,
+        "balanced_accuracy": null,
+        "macro_f1": 0.5,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "20201119": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1-score": 0.6666666666666666,
+            "support": 10.0
+          },
+          "UAV": {
+            "precision": 0.7142857142857143,
+            "recall": 0.45454545454545453,
+            "f1-score": 0.5555555555555556,
+            "support": 11.0
+          }
+        },
+        "accuracy": 0.6190476190476191,
+        "balanced_accuracy": 0.6272727272727273,
+        "macro_f1": 0.6111111111111112,
+        "confusion": [
+          [
+            8,
+            2
+          ],
+          [
+            6,
+            5
+          ]
+        ]
+      }
+    },
+    "Shallow tree": {
+      "20191011": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.9518072289156626,
+            "recall": 0.8633879781420765,
+            "f1-score": 0.9054441260744985,
+            "support": 183.0
+          },
+          "UAV": {
+            "precision": 0.46808510638297873,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.5714285714285714,
+            "support": 30.0
+          }
+        },
+        "accuracy": 0.8450704225352113,
+        "balanced_accuracy": 0.7983606557377049,
+        "macro_f1": 0.738436348751535,
+        "confusion": [
+          [
+            158,
+            25
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "20191012": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.9375,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8955223880597015,
+            "support": 35.0
+          },
+          "UAV": {
+            "precision": 0.6666666666666666,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.7407407407407407,
+            "support": 12.0
+          }
+        },
+        "accuracy": 0.851063829787234,
+        "balanced_accuracy": 0.8452380952380952,
+        "macro_f1": 0.8181315644002212,
+        "confusion": [
+          [
+            30,
+            5
+          ],
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "20191013": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.979253112033195,
+            "recall": 0.9402390438247012,
+            "f1-score": 0.959349593495935,
+            "support": 251.0
+          },
+          "UAV": {
+            "precision": 0.53125,
+            "recall": 0.7727272727272727,
+            "f1-score": 0.6296296296296297,
+            "support": 22.0
+          }
+        },
+        "accuracy": 0.9267399267399268,
+        "balanced_accuracy": 0.856483158275987,
+        "macro_f1": 0.7944896115627823,
+        "confusion": [
+          [
+            236,
+            15
+          ],
+          [
+            5,
+            17
+          ]
+        ]
+      },
+      "20201109": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2.0
+          }
+        },
+        "accuracy": 1.0,
+        "balanced_accuracy": null,
+        "macro_f1": 0.5,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "20201119": {
+        "classes": {
+          "BIRD": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1-score": 0.8888888888888888,
+            "support": 10.0
+          },
+          "UAV": {
+            "precision": 0.8461538461538461,
+            "recall": 1.0,
+            "f1-score": 0.9166666666666666,
+            "support": 11.0
+          }
+        },
+        "accuracy": 0.9047619047619048,
+        "balanced_accuracy": 0.9,
+        "macro_f1": 0.9027777777777777,
+        "confusion": [
+          [
+            8,
+            2
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      }
+    }
+  },
+  "final": {
+    "Majority": {
+      "classes": {
+        "BIRD": {
+          "precision": 0.15853658536585366,
+          "recall": 1.0,
+          "f1-score": 0.2736842105263158,
+          "support": 13.0
+        },
+        "UAV": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 69.0
+        }
+      },
+      "accuracy": 0.15853658536585366,
+      "balanced_accuracy": 0.5,
+      "macro_f1": 0.1368421052631579,
+      "confusion": [
+        [
+          13,
+          0
+        ],
+        [
+          69,
+          0
+        ]
+      ]
+    },
+    "Logistic": {
+      "classes": {
+        "BIRD": {
+          "precision": 0.3684210526315789,
+          "recall": 0.5384615384615384,
+          "f1-score": 0.4375,
+          "support": 13.0
+        },
+        "UAV": {
+          "precision": 0.9047619047619048,
+          "recall": 0.8260869565217391,
+          "f1-score": 0.8636363636363636,
+          "support": 69.0
+        }
+      },
+      "accuracy": 0.7804878048780488,
+      "balanced_accuracy": 0.6822742474916388,
+      "macro_f1": 0.6505681818181819,
+      "confusion": [
+        [
+          7,
+          6
+        ],
+        [
+          12,
+          57
+        ]
+      ]
+    },
+    "Shallow tree": {
+      "classes": {
+        "BIRD": {
+          "precision": 0.5555555555555556,
+          "recall": 0.7692307692307693,
+          "f1-score": 0.6451612903225806,
+          "support": 13.0
+        },
+        "UAV": {
+          "precision": 0.953125,
+          "recall": 0.8840579710144928,
+          "f1-score": 0.9172932330827067,
+          "support": 69.0
+        }
+      },
+      "accuracy": 0.8658536585365854,
+      "balanced_accuracy": 0.826644370122631,
+      "macro_f1": 0.7812272617026437,
+      "confusion": [
+        [
+          10,
+          3
+        ],
+        [
+          8,
+          61
+        ]
+      ]
+    }
+  },
+  "final_days": {
+    "Majority": {
+      "20201218": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.1111111111111111,
+            "recall": 1.0,
+            "f1-score": 0.2,
+            "support": 2.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 16.0
+          }
+        },
+        "accuracy": 0.1111111111111111,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.1,
+        "confusion": [
+          [
+            2,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ]
+      },
+      "20210226": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 7.0
+          }
+        },
+        "accuracy": 0.0,
+        "balanced_accuracy": null,
+        "macro_f1": 0.0,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            7,
+            0
+          ]
+        ]
+      },
+      "20210310": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 9.0
+          }
+        },
+        "accuracy": 0.0,
+        "balanced_accuracy": null,
+        "macro_f1": 0.0,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            9,
+            0
+          ]
+        ]
+      },
+      "20210318": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.22916666666666666,
+            "recall": 1.0,
+            "f1-score": 0.3728813559322034,
+            "support": 11.0
+          },
+          "UAV": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 37.0
+          }
+        },
+        "accuracy": 0.22916666666666666,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.1864406779661017,
+        "confusion": [
+          [
+            11,
+            0
+          ],
+          [
+            37,
+            0
+          ]
+        ]
+      }
+    },
+    "Logistic": {
+      "20201218": {
+        "classes": {
+          "BIRD": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 2.0
+          },
+          "UAV": {
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "f1-score": 0.9696969696969697,
+            "support": 16.0
+          }
+        },
+        "accuracy": 0.9444444444444444,
+        "balanced_accuracy": 0.75,
+        "macro_f1": 0.8181818181818181,
+        "confusion": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            16
+          ]
+        ]
+      },
+      "20210226": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 1.0,
+            "recall": 0.42857142857142855,
+            "f1-score": 0.6,
+            "support": 7.0
+          }
+        },
+        "accuracy": 0.42857142857142855,
+        "balanced_accuracy": null,
+        "macro_f1": 0.3,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      },
+      "20210310": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 1.0,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.875,
+            "support": 9.0
+          }
+        },
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": null,
+        "macro_f1": 0.4375,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      "20210318": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.5,
+            "recall": 0.5454545454545454,
+            "f1-score": 0.5217391304347826,
+            "support": 11.0
+          },
+          "UAV": {
+            "precision": 0.8611111111111112,
+            "recall": 0.8378378378378378,
+            "f1-score": 0.8493150684931506,
+            "support": 37.0
+          }
+        },
+        "accuracy": 0.7708333333333334,
+        "balanced_accuracy": 0.6916461916461916,
+        "macro_f1": 0.6855270994639666,
+        "confusion": [
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            31
+          ]
+        ]
+      }
+    },
+    "Shallow tree": {
+      "20201218": {
+        "classes": {
+          "BIRD": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 2.0
+          },
+          "UAV": {
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "f1-score": 0.9696969696969697,
+            "support": 16.0
+          }
+        },
+        "accuracy": 0.9444444444444444,
+        "balanced_accuracy": 0.75,
+        "macro_f1": 0.8181818181818181,
+        "confusion": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            16
+          ]
+        ]
+      },
+      "20210226": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.8333333333333334,
+            "support": 7.0
+          }
+        },
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": null,
+        "macro_f1": 0.4166666666666667,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "20210310": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "UAV": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 9.0
+          }
+        },
+        "accuracy": 1.0,
+        "balanced_accuracy": null,
+        "macro_f1": 0.5,
+        "confusion": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "20210318": {
+        "classes": {
+          "BIRD": {
+            "precision": 0.6,
+            "recall": 0.8181818181818182,
+            "f1-score": 0.6923076923076923,
+            "support": 11.0
+          },
+          "UAV": {
+            "precision": 0.9393939393939394,
+            "recall": 0.8378378378378378,
+            "f1-score": 0.8857142857142857,
+            "support": 37.0
+          }
+        },
+        "accuracy": 0.8333333333333334,
+        "balanced_accuracy": 0.828009828009828,
+        "macro_f1": 0.789010989010989,
+        "confusion": [
+          [
+            9,
+            2
+          ],
+          [
+            6,
+            31
+          ]
+        ]
+      }
+    }
+  },
+  "explanation": {
+    "standardized_tree": "|--- rcs_std <= 0.05\n|   |--- rcs_mean <= 0.29\n|   |   |--- class: BIRD\n|   |--- rcs_mean >  0.29\n|   |   |--- rcs_std <= -0.34\n|   |   |   |--- class: BIRD\n|   |   |--- rcs_std >  -0.34\n|   |   |   |--- class: UAV\n|--- rcs_std >  0.05\n|   |--- veloX_mean <= -0.37\n|   |   |--- veloX_mean <= -1.23\n|   |   |   |--- class: UAV\n|   |   |--- veloX_mean >  -1.23\n|   |   |   |--- class: BIRD\n|   |--- veloX_mean >  -0.37\n|   |   |--- veloX_mean <= 0.31\n|   |   |   |--- class: UAV\n|   |   |--- veloX_mean >  0.31\n|   |   |   |--- class: BIRD\n"
+  },
+  "configurations": {
+    "Majority": {
+      "constant": null,
+      "random_state": null,
+      "strategy": "most_frequent"
+    },
+    "Logistic": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 100,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 20,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "Shallow tree": {
+      "ccp_alpha": 0.0,
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 3,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 10,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "random_state": 20,
+      "splitter": "best"
+    }
+  },
+  "dataset_revision": "df3cebae895f4f12d23cd50480dd4c47b09d422e",
+  "tracks_sha256": "ba9cc5015b32057d15af2e9d14c2446f77d4858d44c113f9bf092c12b378e5bc",
+  "day_counts": {
+    "20191011": {
+      "BIRD": 183,
+      "HUMAN": 0,
+      "UAV": 30,
+      "VEHICLE": 0
+    },
+    "20191012": {
+      "BIRD": 35,
+      "HUMAN": 18,
+      "UAV": 12,
+      "VEHICLE": 0
+    },
+    "20191013": {
+      "BIRD": 251,
+      "HUMAN": 10,
+      "UAV": 22,
+      "VEHICLE": 6
+    },
+    "20201109": {
+      "BIRD": 0,
+      "HUMAN": 0,
+      "UAV": 2,
+      "VEHICLE": 0
+    },
+    "20201119": {
+      "BIRD": 10,
+      "HUMAN": 0,
+      "UAV": 11,
+      "VEHICLE": 0
+    },
+    "20201218": {
+      "BIRD": 2,
+      "HUMAN": 0,
+      "UAV": 16,
+      "VEHICLE": 5
+    },
+    "20210226": {
+      "BIRD": 0,
+      "HUMAN": 0,
+      "UAV": 7,
+      "VEHICLE": 1
+    },
+    "20210310": {
+      "BIRD": 0,
+      "HUMAN": 0,
+      "UAV": 9,
+      "VEHICLE": 0
+    },
+    "20210318": {
+      "BIRD": 11,
+      "HUMAN": 35,
+      "UAV": 37,
+      "VEHICLE": 0
+    }
+  }
+}
